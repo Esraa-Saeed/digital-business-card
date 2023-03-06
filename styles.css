@@ -1,0 +1,222 @@
+/*
+==================================
+SHARED STYLES
+==================================
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; */
+  background: linear-gradient(
+    to bottom right,
+    rgba(59, 105, 0, 0.7),
+    rgba(87, 125, 163, 0.7)
+  );
+
+  background-size: 100%;
+}
+
+/*
+==================================
+GRID CONTAINER STYLES
+==================================
+*/
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+/*
+==================================
+BUSINESS CARD CONTENTS STYLES
+==================================
+*/
+
+.business-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  /*  width: 200px; */
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  /*grid-area: row start / column start / row end / column end;*/
+  grid-area: 2 / 2 / 4 / 3;
+}
+
+@keyframes turn-name-animation {
+  0% /*of the duration*/ {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.name {
+  margin-bottom: 2px;
+  animation: 0.6s ease-in-out turn-name-animation;
+}
+
+img {
+  width: 200px;
+  border-radius: 5px 5px 0 0;
+}
+
+.business-card:hover {
+  cursor: default;
+  scale: 1.5;
+}
+
+/*
+==================================
+TITLE STYLES
+==================================
+*/
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: -5px;
+  padding: 0;
+}
+
+.job {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+/*
+==================================
+BUTTONS STYLES
+==================================
+*/
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn-1,
+.btn-2 {
+  border: none;
+  padding: 5px 10px 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.btn-1 {
+  background-color: rgba(87, 125, 163, 0.5);
+  margin-right: 2px;
+}
+
+.btn-2 {
+  background-color: rgba(59, 105, 0, 0.5);
+  margin-left: 5px;
+}
+
+/*
+==================================
+SKILLS STYLES
+==================================
+*/
+ul {
+  margin: 5px;
+  font-size: 10px;
+  text-align: left;
+  margin-left: -30px;
+  margin-bottom: 10px;
+}
+
+/*
+==================================
+FOOTER STYLES
+==================================
+*/
+
+footer {
+  background-color: #c4d1e2;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  height: 20px;
+}
+
+/*
+==================================
+ICONS STYLES
+==================================
+*/
+
+.html--icon,
+.css--icon,
+.js--icon,
+.react--icon {
+  position: relative;
+}
+
+.html--icon {
+  scale: 0.4;
+  grid-area: 1 / 1 / 2 / 2;
+  top: 70px;
+  right: -5px;
+}
+
+.html--icon:hover {
+  scale: 0.5;
+}
+
+.css--icon {
+  scale: 0.4;
+  bottom: 45px;
+}
+
+.css--icon:hover {
+  scale: 0.5;
+}
+
+.js--icon {
+  scale: 0.7;
+  right: 10px;
+}
+
+.js--icon:hover {
+  scale: 0.8;
+}
+
+.react--icon {
+  scale: 0.4;
+}
+
+.react--icon:hover {
+  scale: 0.5;
+}
